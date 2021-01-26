@@ -65,6 +65,6 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           title: Vulnerability report
           body: the security issues will be presented here !!!! 
-          assignees: 'rishabhgupta'
+          assignees: 'sohrabch'
       - run: |
             echo ${{ steps.issue.outputs.issue }}
