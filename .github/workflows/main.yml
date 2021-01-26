@@ -66,5 +66,5 @@ jobs:
           title: Vulnerability report
           body: the security issues will be presented here !!!! 
           assignees: 'rishabhgupta'
-        run: |
+      - run: |
             echo ${{ steps.issue.outputs.issue }}
