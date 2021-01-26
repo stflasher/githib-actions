@@ -1,8 +1,8 @@
-name: ZAP-Test
+name: Vulnerability Test
 
 on:
   push: 
-    branches: [ master ]
+    
 
 jobs: 
   build: 
