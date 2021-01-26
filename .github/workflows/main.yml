@@ -58,7 +58,7 @@ jobs:
         with:
           name: zap-scan-report
           path: ./tests/zap-report.json
-       - name: open-issue
+      - name: open-issue
         uses: rishabhgupta/git-action-issue@v2.0.0
         id: Issue
         with:
@@ -66,5 +66,5 @@ jobs:
           title: Vulnerability report
           body: the security issues will be presented here !!!! 
           assignees: 'rishabhgupta'
-        - run: |
+        run: |
             echo ${{ steps.issue.outputs.issue }}
