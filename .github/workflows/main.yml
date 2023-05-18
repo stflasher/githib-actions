@@ -53,8 +53,19 @@ jobs:
         run: |
           cd ./tests/
           python e2e_zap.py
+          cat zap-report.json
       - name: "Upload Report"
         uses: actions/upload-artifact@v1
         with:
           name: zap-scan-report
           path: ./tests/zap-report.json
+      - name: open-issue
+        uses: rishabhgupta/git-action-issue@v2.0.0
+        id: Issue
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: Vulnerability report
+          body: the security issues will be presented here !!!! 
+          assignees: 'sohrabch'
+      - run: |
+            echo ${{ steps.issue.outputs.issue }}
